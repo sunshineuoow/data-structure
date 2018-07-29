@@ -127,7 +127,14 @@ class MyArray<T> {
   }
 
   public toString(): string {
-    return `Array size is ${this.size} capacity is ${this.data.length} \n ${this.data.toString()}`
+    let str = `Array size is ${this.size} capacity is ${this.data.length} \n [`;
+    for (let i = 0; i < this.size; i++) {
+      str += i;
+      if (i !== this.size - 1)
+        str += ',';
+    }
+    str += ']';
+    return str;
   }
 }
 
